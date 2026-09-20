@@ -1,298 +1,300 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0f172a,100:111827&height=220&section=header&text=InspecTR&fontSize=72&fontColor=00ff9d&animation=fadeIn&fontAlignY=35&desc=Security%20Inspection%20%26%20Enumeration%20Tool&descAlignY=58&descSize=18" width="100%"/>
+# 🛡️ InspecTR
+
+### `Security Inspection & Enumeration Tool`
+
+<p>
+  <img src="https://img.shields.io/badge/Linux-Security-00ff9d?style=for-the-badge&logo=linux&logoColor=white" />
+  <img src="https://img.shields.io/badge/Bash-3.0-00ff9d?style=for-the-badge&logo=gnubash&logoColor=white" />
+  <img src="https://img.shields.io/badge/CTF-Ready-111827?style=for-the-badge&logo=tryhackme&logoColor=red" />
+  <img src="https://img.shields.io/badge/Authorized-Only-111827?style=for-the-badge&logo=hackthebox&logoColor=00ff9d" />
+</p>
+
+<p>
+  <img src="https://img.shields.io/github/license/TocsiVector/InspecTR?style=flat-square&label=License" />
+  <img src="https://img.shields.io/github/stars/TocsiVector/InspecTR?style=flat-square&label=Stars" />
+  <img src="https://img.shields.io/github/last-commit/TocsiVector/InspecTR?style=flat-square&label=Last%20Commit" />
+  <img src="https://img.shields.io/github/repo-size/TocsiVector/InspecTR?style=flat-square&label=Repo%20Size" />
+</p>
 
 <br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=20&duration=2800&pause=900&color=00FF9D&center=true&vCenter=true&width=800&lines=Linux+Security+Inspection;System+Enumeration;Privilege+%26+Permission+Review;Network+%26+Service+Inspection;CTF+%7C+eJPT+%7C+OSCP+Learning;Inspect.+Enumerate.+Understand." />
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&duration=2200&pause=900&color=00FF9D&center=true&vCenter=true&width=850&lines=Linux+Security+Inspection;System+Enumeration;Privilege+%26+Permission+Review;Network+%26+Service+Inspection;CTF+%7C+eJPT+%7C+OSCP+Learning;Inspect.+Enumerate.+Understand." />
 
 <br><br>
 
-<img src="https://img.shields.io/badge/Platform-Linux-111827?style=for-the-badge&logo=linux&logoColor=white"/>
-<img src="https://img.shields.io/badge/Language-Bash-111827?style=for-the-badge&logo=gnubash&logoColor=white"/>
-<img src="https://img.shields.io/badge/Version-3.0-111827?style=for-the-badge&logo=github&logoColor=00ff9d"/>
-<img src="https://img.shields.io/badge/License-MIT-111827?style=for-the-badge&logo=opensourceinitiative&logoColor=white"/>
-
-<br>
-
-<img src="https://img.shields.io/badge/CTF-Ready-111827?style=for-the-badge&logo=tryhackme&logoColor=red"/>
-<img src="https://img.shields.io/badge/Authorized%20Assessment-Only-111827?style=for-the-badge&logo=hackthebox&logoColor=00ff9d"/>
-<img src="https://img.shields.io/github/stars/TocsiVector/InspecTR?style=for-the-badge&logo=github&label=Stars"/>
-<img src="https://img.shields.io/github/last-commit/TocsiVector/InspecTR?style=for-the-badge&logo=git&label=Last%20Commit"/>
+```text
+        ╔══════════════════════════════════════════════╗
+        ║                                              ║
+        ║              🛡️  I N S P E C T R             ║
+        ║                                              ║
+        ║       SECURITY INSPECTION ENGINE             ║
+        ║                                              ║
+        ║      INSPECT  →  ENUMERATE  →  REPORT       ║
+        ║                                              ║
+        ╚══════════════════════════════════════════════╝
+```
 
 </div>
 
 ---
 
-# 🛡️ InspecTR
+## 🛡️ About InspecTR
 
-> **Security Inspection & Enumeration Tool**
+**InspecTR** is a Bash-based Linux security inspection and enumeration assistant designed to systematically collect security-relevant information from Linux systems.
 
-**InspecTR** is a single-file Bash-based Linux security inspection and enumeration assistant designed to systematically collect security-relevant information from Linux systems.
+It helps organize a manual Linux enumeration workflow into a structured process.
 
-It is intended for:
+```text
+                    ┌────────────────────────┐
+                    │        InspecTR        │
+                    │ Security Inspector CLI │
+                    └───────────┬────────────┘
+                                │
+        ┌───────────────────────┼───────────────────────┐
+        │                       │                       │
+        ▼                       ▼                       ▼
+   🖥️ SYSTEM                👤 USERS                🌐 NETWORK
+        │                       │                       │
+        ▼                       ▼                       ▼
+   ⚙️ SERVICES            🔐 PERMISSIONS            🔑 SSH
+        │                       │                       │
+        ▼                       ▼                       ▼
+   📦 PACKAGES             ⚡ PROCESSES              ⏰ CRON
+        │                       │                       │
+        └───────────────────────┼───────────────────────┘
+                                │
+                                ▼
+                       🔎 SECURITY LEADS
+                                │
+                                ▼
+                           📝 REPORT
+```
 
-- 🧪 Security labs
-- 🎯 CTF environments
-- 📚 Cybersecurity learning
-- 🐧 Linux security practice
-- 🔐 Authorized security assessments
-- 🛠️ Systems you own or have explicit permission to assess
+### Core workflow
 
-InspecTR focuses on **enumeration, inspection, evidence collection, and reporting** rather than automatic exploitation.
+```text
+┌────────────┐
+│  INSPECT   │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│ ENUMERATE  │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│ FIND LEADS │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│ MANUAL     │
+│ REVIEW     │
+└─────┬──────┘
+      ↓
+┌────────────┐
+│   REPORT   │
+└────────────┘
+```
 
 ---
 
-## ⚡ What is InspecTR?
+# ⚡ Features
 
-InspecTR helps turn a manual Linux enumeration workflow into a structured process.
+<table>
+<tr>
+<td width="50%">
 
-```text
-                         ┌─────────────────────┐
-                         │      InspecTR       │
-                         │  Security Inspector │
-                         └──────────┬──────────┘
-                                    │
-                ┌───────────────────┼───────────────────┐
-                │                   │                   │
-                ▼                   ▼                   ▼
-          🖥️ System            👤 Users            🌐 Network
-                │                   │                   │
-                ▼                   ▼                   ▼
-          ⚙️ Services         🔐 Permissions        🔑 SSH
-                │                   │                   │
-                ▼                   ▼                   ▼
-          📦 Packages         ⚡ Processes           ⏰ Cron
-                │                   │                   │
-                └───────────────────┼───────────────────┘
-                                    │
-                                    ▼
-                          📊 Security-Relevant
-                              Findings / Leads
-                                    │
-                                    ▼
-                              📝 Report
-```
-
-The goal is simple:
-
-```text
-Inspect → Enumerate → Identify Leads → Review → Report
-```
-
----
-
-# ✨ Features
-
-### 🖥️ System Information
-
-Collects basic host information including:
+### 🖥️ System Inspection
 
 - Hostname
-- Kernel information
+- Operating system
+- Kernel
 - Architecture
 - Uptime
-- Operating system information
-- Memory usage
-- Disk usage
+- CPU information
+- RAM information
+- Disk information
 
----
+</td>
+
+<td width="50%">
 
 ### 👤 Users & Groups
 
-Inspects:
-
-- Current user identity
-- UID/GID
-- Logged-in users
-- Recent logins
+- Current user
+- UID / GID
 - Local users
 - Local groups
+- Logged-in users
+- Recent login information
 - `/etc/passwd`
 - `/etc/group`
-- Readability of `/etc/shadow` where applicable
 
----
+</td>
+</tr>
 
-### 📂 Filesystem & Storage
+<tr>
+<td>
 
-Inspects:
+### 🔐 Permission Inspection
 
-- Mounted filesystems
-- Disk usage
-- Important directories
-- `/`
-- `/etc`
-- `/home`
-- `/tmp`
-- `/var`
-- `/opt`
-- `/usr`
-- `/root`
-
----
-
-### 🔐 Permissions & Privileges
-
-Reviews security-relevant permission information such as:
-
-- `sudo`
+- Sudo configuration
 - SUID files
 - SGID files
-- Linux file capabilities
+- Linux capabilities
 - Writable directories
 - Writable PATH directories
-- Permission-related leads
+- Ownership and permissions
 
-> InspecTR reports these as **review leads**, not automatic vulnerability verdicts.
+</td>
 
----
+<td>
 
-### ⚙️ Process Enumeration
-
-Collects:
+### ⚙️ Process Inspection
 
 - Running processes
+- Root-owned processes
 - CPU-heavy processes
 - Memory-heavy processes
-- Root-owned processes
+- Process information
 
----
+</td>
+</tr>
 
-### 🔧 Services & Systemd
+<tr>
+<td>
 
-Inspects:
+### 🔧 Service Enumeration
 
 - Running services
 - Enabled services
+- Systemd information
 - Systemd timers
 - Listening services
-- Listening network sockets
 
----
+</td>
+
+<td>
 
 ### 🌐 Network Inspection
-
-Collects:
 
 - Network interfaces
 - IP addresses
 - Routing table
-- Neighbor table
+- Neighbor information
 - DNS configuration
-- Listening TCP/UDP ports
-- Established connections
+- Listening ports
+- Active connections
 
----
+</td>
+</tr>
+
+<tr>
+<td>
 
 ### 🔑 SSH Inspection
 
-Checks:
-
-- SSH listener information
+- SSH service
 - SSH configuration
-- Current user's `.ssh` directory
-- `authorized_keys` presence
+- `.ssh` directory
+- `authorized_keys`
+- SSH-related information
 
----
+</td>
+
+<td>
 
 ### ⏰ Scheduled Tasks
 
-Inspects:
-
-- Current user's crontab
+- User crontab
 - `/etc/cron.d`
-- `/etc/cron.daily`
-- `/etc/cron.hourly`
-- `/etc/cron.weekly`
-- `/etc/cron.monthly`
+- Daily cron
+- Hourly cron
+- Weekly cron
+- Monthly cron
 - Systemd timers
 
----
+</td>
+</tr>
 
-### 📦 Package & Software Information
+<tr>
+<td>
 
-Checks:
+### 📦 Package Inspection
 
-- APT availability
+- Package manager
 - Installed package count
-- Common security/development utilities
+- Security-related utilities
+- Common development utilities
+- Common networking tools
 
-Common tools checked include:
+</td>
 
-```text
-nmap
-curl
-wget
-python3
-python
-perl
-gcc
-git
-ssh
-nc
-netcat
-```
-
----
+<td>
 
 ### 🧪 Environment Inspection
 
-Reviews:
-
 - `$PATH`
 - `$SHELL`
-- Selected environment variable names
+- Environment information
 - `.bashrc`
-- `.bash_profile`
 - `.profile`
+- Shell configuration
 
-It also checks for writable PATH directories that may deserve manual review.
+</td>
+</tr>
 
----
-
-### 📄 Interesting Files
-
-Checks common Linux files including:
-
-```text
-/etc/passwd
-/etc/group
-/etc/hosts
-/etc/hostname
-/etc/resolv.conf
-/etc/fstab
-```
-
-It also samples readable configuration-style files from selected directories.
+</table>
 
 ---
 
-# 🎯 CTF Mode
+# 🎯 Assessment Modes
 
-CTF Mode is designed for authorized challenge environments.
-
-It combines:
+InspecTR provides multiple workflows for different learning and assessment scenarios.
 
 ```text
-System
-   ↓
-Users
-   ↓
-Network
-   ↓
-Services
-   ↓
-Permissions
-   ↓
-Scheduled Tasks
-   ↓
-Interesting Files
-   ↓
-Flag Search
+╔════════════════════════════════════════════════════╗
+║                    INSPECTR MODES                  ║
+╠════════════════════════════════════════════════════╣
+║                                                    ║
+║  [1] CTF MODE              Challenge Enumeration   ║
+║  [2] eJPT MODE             Linux Security Labs    ║
+║  [3] OSCP MODE             Deep Enumeration       ║
+║  [4] BUG HUNTING           Basic Web Recon        ║
+║  [5] GENERAL LINUX         System Inspection      ║
+║  [6] FULL SCAN             Complete Inspection    ║
+║                                                    ║
+╚════════════════════════════════════════════════════╝
 ```
 
-The flag-search functionality looks for common challenge naming patterns such as:
+---
+
+# 🧪 CTF Mode
+
+Designed for authorized CTF and challenge environments.
+
+```text
+SYSTEM
+   ↓
+USERS
+   ↓
+FILESYSTEM
+   ↓
+NETWORK
+   ↓
+SERVICES
+   ↓
+PERMISSIONS
+   ↓
+SCHEDULED TASKS
+   ↓
+INTERESTING FILES
+   ↓
+FLAG SEARCH
+```
+
+Common challenge patterns include:
 
 ```text
 flag*
@@ -301,15 +303,13 @@ user.txt
 root.txt
 ```
 
-and selected flag-like text patterns.
-
-> ⚠️ Use this functionality only inside an authorized CTF or challenge environment.
+Use this mode only in authorized CTF environments.
 
 ---
 
 # 🎓 eJPT Mode
 
-The eJPT-oriented workflow focuses on Linux enumeration fundamentals:
+The eJPT-oriented workflow focuses on Linux enumeration fundamentals.
 
 ```text
 System
@@ -327,62 +327,62 @@ SSH
 Permissions
 ```
 
-This mode is intended as a learning and enumeration assistant rather than an exploitation framework.
+The purpose is to help understand the information that should be collected during an authorized assessment.
 
 ---
 
 # 🔴 OSCP Mode
 
-The OSCP-oriented workflow performs deeper Linux enumeration across:
+The OSCP-oriented workflow performs broader Linux enumeration.
 
 ```text
-System
-Users
-Filesystem
-Permissions
-Processes
-Services
-Network
-SSH
-Scheduled Tasks
-Environment
-Packages
-Interesting Files
+┌──────────────────────────────┐
+│         OSCP MODE            │
+├──────────────────────────────┤
+│ System                       │
+│ Users                        │
+│ Filesystem                   │
+│ Permissions                  │
+│ Processes                    │
+│ Services                     │
+│ Network                      │
+│ SSH                          │
+│ Scheduled Tasks              │
+│ Environment                  │
+│ Packages                     │
+│ Interesting Files            │
+└──────────────────────────────┘
 ```
 
-The results are intended for manual analysis and further investigation inside an authorized environment.
+The results are intended for manual investigation.
 
 ---
 
 # 🌐 Bug Hunting Mode
 
-Bug Hunting Mode provides **basic authorized web reconnaissance**.
-
-The user supplies an authorized domain or host.
-
-It can perform:
+Provides basic authorized web reconnaissance.
 
 ```text
-Target
+TARGET
   ↓
-DNS Resolution
+DNS RESOLUTION
   ↓
-HTTP/HTTPS Headers
+HTTP / HTTPS INFORMATION
   ↓
-HTTP Metadata
+RESPONSE HEADERS
   ↓
 robots.txt
 ```
 
-The mode is intentionally limited to basic reconnaissance.
+This mode is intentionally reconnaissance-oriented and does not automatically exploit targets.
 
-> ⚠️ Only use it against domains or hosts that are explicitly inside your authorized scope.
+Only use it against assets that are explicitly within your authorized scope.
 
 ---
 
-# 🔍 General Linux Mode
+# 🔎 General Linux Mode
 
-General Mode provides a broad Linux information collection workflow:
+General Linux mode provides broad local system inspection.
 
 ```text
 System
@@ -400,85 +400,95 @@ Environment
 Useful for:
 
 - Linux learning
-- Lab environments
-- Security practice
-- Initial system inspection
+- Security labs
+- CTF preparation
+- System inspection
+- Enumeration practice
 
 ---
 
 # 🚀 Full Security Scan
 
-Full Scan combines the major local enumeration modules.
+Full Scan combines the major inspection modules.
 
 ```text
-┌─────────────────────────────┐
-│     FULL INSPECTR SCAN      │
-└──────────────┬──────────────┘
-               │
-               ├── System
-               ├── Users
-               ├── Filesystem
-               ├── Permissions
-               ├── Processes
-               ├── Services
-               ├── Network
-               ├── SSH
-               ├── Scheduled Tasks
-               ├── Packages
-               ├── Environment
-               └── Interesting Files
+                  FULL SCAN
+                     │
+       ┌─────────────┼─────────────┐
+       │             │             │
+       ▼             ▼             ▼
+    SYSTEM         USERS        NETWORK
+       │             │             │
+       ▼             ▼             ▼
+ PERMISSIONS     PROCESSES     SERVICES
+       │             │             │
+       └─────────────┼─────────────┘
+                     │
+          ┌──────────┼──────────┐
+          ▼          ▼          ▼
+         SSH        CRON     PACKAGES
+          │          │          │
+          └──────────┼──────────┘
+                     ▼
+               ENVIRONMENT
+                     │
+                     ▼
+             INTERESTING FILES
+                     │
+                     ▼
+                  REPORT
 ```
-
-> ⚠️ Full scans may take longer on systems with large filesystems.
 
 ---
 
-# 📊 Security Findings
+# 📊 Security-Relevant Findings
 
-InspecTR can identify **security-relevant leads** that deserve manual review.
+InspecTR identifies information that may deserve manual security review.
 
-Examples include:
+Example:
 
 ```text
-[HIGH-INTEREST] Non-interactive sudo permission may be available.
+[HIGH-INTEREST] Sudo permission requires review.
 
-[REVIEW] SUID executables detected.
+[REVIEW] SUID executable detected.
 
-[REVIEW] File capabilities detected.
+[REVIEW] SGID executable detected.
+
+[REVIEW] Linux capability detected.
 
 [REVIEW] Writable PATH directory detected.
 
-[REVIEW] /etc/shadow readable.
+[REVIEW] Sensitive file permissions require review.
 ```
 
-These messages should **not automatically be interpreted as vulnerabilities**.
+### Important
 
-The purpose is to help the assessor identify areas requiring further investigation.
+InspecTR does **not** automatically classify every finding as a vulnerability.
+
+The intended workflow is:
 
 ```text
-Enumeration Finding
-        ↓
+Finding
+   ↓
 Manual Validation
-        ↓
+   ↓
 Context Analysis
-        ↓
+   ↓
 Security Decision
 ```
 
+This prevents enumeration output from being confused with confirmed vulnerabilities.
+
 ---
 
-# 📝 Reporting
+# 📝 Report Generation
 
-Each assessment can generate a report inside:
-
-```text
-./inspectr_reports/
-```
-
-Report naming follows:
+InspecTR can generate assessment reports.
 
 ```text
-report_<hostname>_<timestamp>.txt
+inspectr_reports/
+│
+└── report_<hostname>_<timestamp>.txt
 ```
 
 Example:
@@ -488,32 +498,33 @@ inspectr_reports/
 └── report_kali_20260920_174500.txt
 ```
 
-Reports contain information such as:
+Reports can contain:
 
-- InspecTR version
-- Host
-- User
+- Host information
+- Current user
 - Selected mode
-- Start time
-- Creation time
-- Enumeration sections
+- Enumeration results
+- Security-relevant findings
 - Command output
-- Security-relevant leads
+- Assessment timestamps
 
 ---
 
-# 🖥️ Main Menu
+# 🖥️ CLI
 
-Running InspecTR without arguments opens the interactive menu:
+Run InspecTR:
+
+```bash
+./inspectr.sh
+```
+
+The interactive interface provides:
 
 ```text
-============================================================
-                         INSPECTR
-============================================================
-
-Security Inspection & Enumeration Tool
-
-==================== MAIN MENU ====================
+╔══════════════════════════════════════════════════╗
+║                  I N S P E C T R                 ║
+║        Security Inspection & Enumeration        ║
+╚══════════════════════════════════════════════════╝
 
 1) CTF Mode
 2) eJPT Mode
@@ -529,44 +540,27 @@ INSPECTR >
 
 ---
 
-# ⚙️ Requirements
+# ⚙️ Installation
 
-InspecTR is designed for Linux environments with Bash.
-
-Recommended environments:
-
-- Kali Linux
-- Debian
-- Ubuntu
-- Other compatible Linux distributions
-
-Some functionality depends on utilities being available on the host.
-
-InspecTR checks for command availability and reports when a required command is unavailable.
-
----
-
-# 📥 Installation
-
-Clone the repository:
+### 1. Clone
 
 ```bash
 git clone https://github.com/TocsiVector/InspecTR.git
 ```
 
-Enter the directory:
+### 2. Enter directory
 
 ```bash
 cd InspecTR
 ```
 
-Make the script executable:
+### 3. Make executable
 
 ```bash
 chmod +x inspectr.sh
 ```
 
-Run:
+### 4. Run
 
 ```bash
 ./inspectr.sh
@@ -574,13 +568,7 @@ Run:
 
 ---
 
-# ▶️ Usage
-
-### Interactive mode
-
-```bash
-./inspectr.sh
-```
+# 🧰 Command Options
 
 ### Help
 
@@ -608,17 +596,17 @@ or:
 
 ---
 
-# 📁 Project Structure
+# 📂 Project Structure
 
 ```text
 InspecTR/
 │
 ├── inspectr.sh
-├── LICENSE
-└── README.md
+├── README.md
+└── LICENSE
 ```
 
-Runtime reports are created separately:
+Runtime reports:
 
 ```text
 inspectr_reports/
@@ -629,52 +617,152 @@ inspectr_reports/
 
 # 🧠 Design Philosophy
 
-InspecTR follows a simple security workflow:
+InspecTR is built around one principle:
+
+> **Understand the system before attempting to act on it.**
+
+The tool emphasizes:
 
 ```text
-                    ┌───────────────┐
-                    │    INSPECT    │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │   ENUMERATE   │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │  FIND LEADS   │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │ MANUAL REVIEW │
-                    └───────┬───────┘
-                            ↓
-                    ┌───────────────┐
-                    │    REPORT     │
-                    └───────────────┘
+     VISIBILITY
+         ↓
+     ENUMERATION
+         ↓
+    INFORMATION
+         ↓
+   MANUAL ANALYSIS
+         ↓
+      DECISION
 ```
 
-InspecTR is intentionally designed around **visibility and understanding**, not automatic exploitation.
+It is an **inspection and enumeration assistant**, not an automatic exploitation framework.
 
 ---
 
 # 🛡️ Security Philosophy
 
-InspecTR follows these principles:
-
 ```text
-✓ Inspect
-✓ Enumerate
-✓ Collect
-✓ Document
-✓ Review manually
-
-✗ No automatic exploitation
-✗ No credential attacks
-✗ No persistence
-✗ No destructive actions
+┌──────────────────────────────────────────┐
+│              INSPECTR                    │
+├──────────────────────────────────────────┤
+│                                          │
+│  ✓ Inspect                               │
+│  ✓ Enumerate                             │
+│  ✓ Collect                               │
+│  ✓ Document                              │
+│  ✓ Review                                │
+│                                          │
+│  ✗ No automatic exploitation             │
+│  ✗ No credential attacks                 │
+│  ✗ No persistence                        │
+│  ✗ No destructive actions                │
+│                                          │
+└──────────────────────────────────────────┘
 ```
 
-The tool should be used as an enumeration and inspection assistant.
+---
+
+# 🧪 Example Workflow
+
+```text
+┌──────────────────────┐
+│ Start Authorized Lab │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Launch InspecTR      │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Select Assessment    │
+│ Mode                 │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Collect Information  │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Review Findings      │
+└──────────┬───────────┘
+           ↓
+┌──────────────────────┐
+│ Generate Report      │
+└──────────────────────┘
+```
+
+---
+
+# 🧩 Technology
+
+| Component | Details |
+|---|---|
+| Language | Bash |
+| Platform | Linux |
+| Interface | CLI |
+| Architecture | Single-file utility |
+| Reporting | TXT |
+| Version | 3.0 |
+| License | MIT |
+
+---
+
+# 🗺️ Roadmap
+
+### Current Foundation
+
+```text
+████████████████████████████████████████ 100%
+```
+
+- [x] Interactive CLI
+- [x] System inspection
+- [x] User enumeration
+- [x] Group enumeration
+- [x] Filesystem inspection
+- [x] Permission inspection
+- [x] SUID / SGID inspection
+- [x] Linux capability inspection
+- [x] Process enumeration
+- [x] Service enumeration
+- [x] Network inspection
+- [x] SSH inspection
+- [x] Scheduled-task inspection
+- [x] Package inspection
+- [x] Environment inspection
+- [x] Interesting-file inspection
+- [x] CTF flag search
+- [x] Basic authorized web reconnaissance
+- [x] Multiple assessment modes
+- [x] TXT report generation
+- [x] Help option
+- [x] Version option
+
+### Future Development
+
+- [ ] Improved modular architecture
+- [ ] Better report formatting
+- [ ] More configurable scan profiles
+- [ ] Additional Linux security checks
+- [ ] Improved dependency handling
+- [ ] Automated testing
+- [ ] Extended documentation
+- [ ] Release packaging
+
+---
+
+# 📌 Version
+
+```text
+╔══════════════════════════════════════╗
+║             InspecTR v3.0            ║
+╠══════════════════════════════════════╣
+║ Language : Bash                      ║
+║ Platform : Linux                     ║
+║ Type     : Security Enumeration      ║
+║ Interface: CLI                       ║
+╚══════════════════════════════════════╝
+```
 
 ---
 
@@ -695,200 +783,18 @@ The user is responsible for ensuring that their use of the tool complies with ap
 
 ---
 
-# 🧪 Example Workflow
-
-A basic Linux lab workflow can look like:
-
-```text
-1. Start the authorized Linux lab
-          ↓
-2. Launch InspecTR
-          ↓
-3. Select General / eJPT / OSCP / CTF
-          ↓
-4. Review enumeration output
-          ↓
-5. Inspect security-relevant leads
-          ↓
-6. Review generated report
-          ↓
-7. Perform manual investigation
-```
-
----
-
-# 🔬 Example
-
-```bash
-chmod +x inspectr.sh
-./inspectr.sh
-```
-
-Then:
-
-```text
-INSPECTR > 6
-```
-
-for:
-
-```text
-Full Security Scan
-```
-
-After completion:
-
-```text
-Report:
-./inspectr_reports/report_<hostname>_<timestamp>.txt
-```
-
----
-
-# 🧩 Technology
-
-| Component | Technology |
-|---|---|
-| Language | Bash |
-| Platform | Linux |
-| Interface | CLI |
-| Architecture | Single-file utility |
-| Reporting | TXT |
-| Target | Authorized Linux systems / labs |
-| Current Version | 3.0 |
-
----
-
-# 🗺️ Roadmap
-
-Current foundation:
-
-```text
-[████████████████████████████████████████] 100%
-```
-
-### Current
-
-- [x] Single-file Bash architecture
-- [x] Interactive CLI
-- [x] Colored terminal output
-- [x] System inspection
-- [x] User/group enumeration
-- [x] Filesystem inspection
-- [x] Permission inspection
-- [x] Process enumeration
-- [x] Service enumeration
-- [x] Network inspection
-- [x] SSH inspection
-- [x] Scheduled-task inspection
-- [x] Package information
-- [x] Environment inspection
-- [x] Interesting-file inspection
-- [x] CTF flag search
-- [x] Basic authorized web reconnaissance
-- [x] Multiple assessment modes
-- [x] TXT report generation
-- [x] `--help`
-- [x] `--version`
-
-### Future Development
-
-- [ ] Improved module architecture
-- [ ] Better report formatting
-- [ ] More configurable scan profiles
-- [ ] Additional Linux security checks
-- [ ] Improved dependency detection
-- [ ] Extended documentation
-- [ ] Automated testing
-- [ ] Release packaging
-
-> Roadmap items are planned development goals and may change.
-
----
-
-# 🧱 Architecture
-
-```text
-                    INSPECTR
-                       │
-                       ▼
-                 CLI Controller
-                       │
-        ┌──────────────┼──────────────┐
-        │              │              │
-        ▼              ▼              ▼
-      Modes         Inspection       Reporting
-        │              │              │
-        │              ├─ System      │
-        │              ├─ Users       │
-        │              ├─ Filesystem  │
-        │              ├─ Permissions │
-        │              ├─ Processes   │
-        │              ├─ Services    │
-        │              ├─ Network     │
-        │              ├─ SSH         │
-        │              ├─ Cron        │
-        │              ├─ Packages    │
-        │              └─ Environment │
-        │                             │
-        └─────────────────────────────┤
-                                      ▼
-                               TXT Report
-```
-
----
-
-# 🎨 Terminal Experience
-
-InspecTR includes terminal-oriented visual feedback such as:
-
-```text
-[+] Section
-────────────────────────────────────────────────────────────
-
-[*] Collecting information...
-
-[>] System [########################]
-
-[✓] Completed
-
-[!] Review required
-
-[✗] Error
-```
-
-The script also adapts its color output depending on whether the output is attached to a terminal.
-
----
-
-# 📌 Version
-
-```text
-InspecTR v3.0
-```
-
-Current implementation:
-
-```text
-Language : Bash
-Type     : Linux Security Inspection & Enumeration
-Interface: CLI
-```
-
----
-
 # 👨‍💻 Author
 
 <div align="center">
 
 ### TocsiVector
 
-Cybersecurity | Linux | Offensive Security | Security Research
+**Cybersecurity • Linux • Offensive Security • Security Research**
 
 <br>
 
 <a href="https://github.com/TocsiVector">
-<img src="https://img.shields.io/badge/GitHub-TocsiVector-111827?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/GitHub-TocsiVector-111827?style=for-the-badge&logo=github&logoColor=white" />
 </a>
 
 </div>
@@ -897,32 +803,44 @@ Cybersecurity | Linux | Offensive Security | Security Research
 
 # 📜 License
 
-This project is licensed under the **MIT License**.
+InspecTR is released under the **MIT License**.
 
-See the [`LICENSE`](LICENSE) file for details.
+See [`LICENSE`](LICENSE) for details.
 
 ---
 
-# ⭐ Support the Project
+# ⭐ Support
 
-If you find InspecTR useful for learning, CTFs, labs, or authorized security assessment:
+If InspecTR is useful for your learning, CTFs, labs, or authorized security assessments:
 
-- ⭐ Star the repository
-- 🐛 Report reproducible bugs
-- 💡 Suggest improvements
-- 🔧 Contribute improvements
-- 📚 Share feedback
+```text
+⭐ Star
+🐛 Report bugs
+💡 Suggest improvements
+🔧 Contribute
+📚 Share feedback
+```
 
 ---
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:020617,50:0f172a,100:111827&height=140&section=footer&text=Inspect.%20Enumerate.%20Understand.&fontSize=26&fontColor=00ff9d&animation=fadeIn" width="100%"/>
+<br>
 
-### 🛡️ InspecTR
+<img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=18&duration=2500&pause=1000&color=00FF9D&center=true&vCenter=true&width=700&lines=Inspect.;Enumerate.;Understand.;Report." />
 
-**Security Inspection & Enumeration Tool**
+<br><br>
 
-`Built for learning • CTFs • Labs • Authorized Security Assessments`
+```text
+╔══════════════════════════════════════════╗
+║                                          ║
+║              🛡️ InspecTR                ║
+║                                          ║
+║     Inspect. Enumerate. Understand.      ║
+║                                          ║
+╚══════════════════════════════════════════╝
+```
+
+**Built for Learning • CTFs • Labs • Authorized Security Assessments**
 
 </div>
